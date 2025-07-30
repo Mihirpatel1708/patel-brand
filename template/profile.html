@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}         
+
+      <!-- inner page section -->
+      <section class="inner_page_head">
+         <div class="container_fuild">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <h3>Your Profile</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end inner page section -->
+      <!-- why section -->
+      <section class="why_section layout_padding">
+         <div class="container">
+         
+            <div class="row" style='display:flex; justify-content:center; align-items:center; margin-left:180px;'>
+               <div class="col-lg-8 offset-lg-2">
+                  <fieldset>
+                     <h4>Username:-   {{user.username}}</h4>
+                     <h4>Email:-   {{user.email}}</h4>
+                     {% comment %} <h6>Password:-{{user.password}}</h6> {% endcomment %}
+                        
+                  </fieldset>
+                  <div>
+                     <a href="{% url 'trackorder' %}" style='color:red;'>Track order</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end why section -->
+      
+{% endblock %}

@@ -1,0 +1,361 @@
+{% extends "base.html" %}
+{% block content %}         
+
+         <!-- slider section -->
+         <section class="slider_section ">
+            <div class="slider_bg_box">
+               <img src="/static/images/slider-bg.jpg" alt="">
+            </div>
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container ">
+                        <div class="row">
+                           <div class="col-md-7 col-lg-6 ">
+                              <div class="detail-box">
+                                 <h1>
+                                    <span>
+                                    Patel Goggles
+                                    </span>
+                                    
+                                 </h1>
+                                 
+                                 <div class="btn-box">
+                                    <a href='/product' class="btn1">
+                                    Shop Now
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- end slider section -->
+      </div>
+
+     
+      
+      <!-- product section -->
+      <section class="product_section layout_padding">
+         <div class="container">
+            <div class="heading_container heading_center">
+               <h2>
+                   <span>Products</span>
+               </h2>
+            </div>
+            <div class="row"> 
+               {% for i in categories %}
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     
+                     <div class="img-box">
+                        <img src="/media/{{i.mimage}}" alt="">
+                     </div>
+                     {% comment %} <div class="detail-box">
+                        <h5>
+                           {{i.mname}}
+                        </h5>
+                        <h6>
+                           :-{{i.mprice}}
+                        </h6>
+                     </div>
+                        <h6>
+                           {{i.mdescriptions}} 
+                        </h6>
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add to Cart
+                           </a>
+                        </div> {% endcomment %}
+                  </div>
+               </div>
+               {% endfor %}
+               {% comment %}
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/voyage.jpg" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Voyage
+                        </h5>
+                        <h6>
+                           $20
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/Versace-Sunglasses.jpg" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Versace Sunglasses
+                        </h5>
+                        <h6>
+                           $25
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/prada.jpg" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Prada
+                        </h5>
+                        <h6>
+                           $20
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/Louis Vuition.jpg" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Louis Vuition
+                        </h5>
+                        <h6>
+                           $15
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/free-size-grey.jpeg" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Stylish Gray 
+                        </h5>
+                        <h6>
+                           $10
+                        </h6>
+                     </div>
+                  </div>
+               </div> 
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/p7.png" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Women's Dress
+                        </h5>
+                        <h6>
+                           $80
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/p8.png" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Men's Shirt
+                        </h5>
+                        <h6>
+                           $65
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/p9.png" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Men's Shirt
+                        </h5>
+                        <h6>
+                           $65
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/p10.png" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Men's Shirt
+                        </h5>
+                        <h6>
+                           $65
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/p11.png" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Men's Shirt
+                        </h5>
+                        <h6>
+                           $65
+                        </h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="cart" class="option1">
+                           Add To Cart
+                           </a>
+                           
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="/static/images/p12.png" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Women's Dress
+                        </h5>
+                        <h6>
+                           $65
+                        </h6>
+                     </div>
+                  </div>
+               </div> {% endcomment %}
+            </div>
+            <div class="btn-box">
+               <a href='/product'>
+               View All Products
+               </a>
+            </div>
+         </div>
+      </section>
+      <!-- end product section -->
+
+      {% comment %} <div class="heading_container heading_center">
+               <h2>
+                  Our <span>products</span>
+               </h2>
+</div>
+
+<section class="product-grid">
+    {% for i in categories %}
+    <div class="product-card">
+        <img src="/media/{{i.image}}" alt="" height="200px" width="200px">
+        <h3>{{i.name}}</h3>
+        <p class="price">PRICE :-{{i.price}}</p>
+        <a href="/cart" class="buy-btn">
+            Add To Cart
+        </a>
+    </div>
+    {% endfor %}
+</section>
+
+<div class="btn-box">
+   <a href='/product'>View All products</a>
+</div> {% endcomment %}
+{% endblock %}

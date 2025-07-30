@@ -1,0 +1,102 @@
+{% include 'base1.html'%}
+
+
+{% block content1 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    {% comment %} <title>Register</title> {% endcomment %}
+
+    {% comment %} <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet--> {% endcomment %}
+    <style media="screen">
+
+
+  .cart-container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align:center;
+  }
+
+  .cart-table th, .cart-table td {
+    padding: 25px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .cart-table th {
+    background-color:rgb(0, 0, 0);
+    color: white;
+    font-weight:inherit;
+  }
+  .continue{
+    text-align:center;
+  }
+  .continue a{
+    text-decoration:none;
+    font-size:18px;
+  }
+    </style> 
+
+<section class="inner_page_head">
+         <div class="container_fuild">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <h3>Order Details:</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+</section>
+
+<div class="cart-container">
+<table border="2px" class="cart-table">
+    <thead>
+        <tr>
+            <th>Your Name</th>
+            <th>Address</th>
+            <th>Phone No</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zipcode</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in fc %}
+        <tr>
+            <td>{{ i.fullname }}</td>
+            <td>{{ i.address }}</td>
+            <td>{{ i.phonenumber }}</td> 
+            <td>{{ i.city }}</td>
+            <td>{{ i.state }}</td>
+            <td>{{ i.zipcode }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No orders found</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<br/>
+  <div class='continue'>
+    <a href="{% url 'trackorder' %} ">Track Order</a>
+  </div>
+</center>
+  
+{% endblock %}
