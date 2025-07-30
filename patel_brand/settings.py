@@ -9,7 +9,7 @@ SECRET_KEY = 'django-insecure-63qt+amql86iv*&_6)9^me9af4nborrexrsk&*v=t=&_51t(b5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']  # Allow all for development (use specific domains in production)
+ALLOWED_HOSTS = ['*']  # Allow all for local/dev. Use your domain in production.
 
 # Application definition
 INSTALLED_APPS = [
@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'service',  # your app
+    'service',  # Your app
 ]
 
 MIDDLEWARE = [
@@ -37,10 +37,11 @@ ROOT_URLCONF = 'patel_brand.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'template'],  # template folder path
+        'DIRS': [BASE_DIR / 'template'],  # Template directory
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -81,22 +82,24 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 
+# ✅ Important: Required to fix your collectstatic error
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# For development: where to look for static files
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-# Media files
+# Media files (uploaded content)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# Redirects after login/logout
+# Login/Logout Redirects
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
 
-# Primary key field type
+# Default auto field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
